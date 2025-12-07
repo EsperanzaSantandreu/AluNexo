@@ -1,11 +1,17 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const generateImage = async (prompt: string): Promise<string | null> => {
   try {
+    const apiKey = import.meta.env.VITE_API_KEY;
+
+    if (!apiKey) {
+      console.warn("Gemini API Key is missing. Skipping image generation.");
+      return null;
+    }
+
+    const ai = new GoogleGenAI({ apiKey });
     const model = 'gemini-2.5-flash-image';
-    
+
     // Enhance the prompt for architectural photography style tailored to Aluminum/PVC/Glass
     const enhancedPrompt = `Professional architectural photography, high resolution, 4k, photorealistic, modern minimalist style, clean lines, bright natural lighting, focus on materials like aluminium, glass and white PVC: ${prompt}. No text overlays.`;
 
@@ -30,7 +36,7 @@ export const generateImage = async (prompt: string): Promise<string | null> => {
         return `data:image/png;base64,${part.inlineData.data}`;
       }
     }
-    
+
     return null;
   } catch (error) {
     console.error("Error generating image:", error);
