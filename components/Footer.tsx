@@ -7,18 +7,19 @@ export const Footer: React.FC = () => {
     <footer className="bg-nex-dark text-white pt-16 pb-8 border-t-4 border-nex-blue">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          
+
+
           {/* Brand */}
           <div className="space-y-4">
-             <div className="flex items-center gap-2">
-                <Logo className="w-8 h-8 text-nex-blue" />
-                <div className="text-white font-display font-bold text-2xl tracking-tighter uppercase">
-                  Alu<span className="text-nex-blue">Nexo</span>
-                </div>
-             </div>
-             <p className="text-gray-400 text-sm leading-relaxed">
-               Expertos en carpintería de aluminio, PVC y sistemas de vidrio. Transformamos tu hogar con soluciones modernas y eficientes.
-             </p>
+            <div className="flex items-center gap-3">
+              <Logo className="w-10 h-10" />
+              <div className="text-white font-display font-bold text-2xl tracking-tight">
+                Alu<span className="text-nex-blue">Nexo</span>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Expertos en carpintería de aluminio, PVC y sistemas de vidrio. Transformamos tu hogar con soluciones modernas y eficientes.
+            </p>
           </div>
 
           {/* Links */}
@@ -69,9 +70,9 @@ export const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>© Copyright AluNexo 2024.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-             <Facebook className="w-5 h-5 hover:text-nex-blue cursor-pointer transition-colors" />
-             <Instagram className="w-5 h-5 hover:text-nex-blue cursor-pointer transition-colors" />
-             <Twitter className="w-5 h-5 hover:text-nex-blue cursor-pointer transition-colors" />
+            <Facebook className="w-5 h-5 hover:text-nex-blue cursor-pointer transition-colors" />
+            <Instagram className="w-5 h-5 hover:text-nex-blue cursor-pointer transition-colors" />
+            <Twitter className="w-5 h-5 hover:text-nex-blue cursor-pointer transition-colors" />
           </div>
         </div>
       </div>
